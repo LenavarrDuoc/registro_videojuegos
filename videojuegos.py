@@ -71,7 +71,16 @@ while True:
         if not encontrado:
             print("Videojuego no encontrado.")
     elif opt == "4":
-        pass
+        codigo = int(input("Ingrese el código del videojuego a eliminar: "))
+        eliminado = False
+        for v in videojuego:
+            if v["codigo"] == codigo:
+                videojuegos.remove(v)
+                print("Videojuego eliminado correctamente.")
+                eliminado = True
+        if not eliminado:
+            print("Videojuego no encontrado.")
+            
     elif opt == "5":
         print("Saliendo del programa.")
         break
